@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=:en>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!--상단바 제작-->
+		<div id="status-bar">
+			<div class="status-bar__column">
+				<span>No service</span>
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+			<span>19:35</span>
+			</div>
+			<div class="status-bar__column">
+			<span>110%</span>
+			<i class="fas fa-battery-three-quarters"></i>
+			<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+		<!--<div> 칸 총 3개를 활용하여 각 칸 안에 필요구문을 넣었고, fontawesome을 활용하여 적절한 icon을 넣음 -->
+		
+		<!--로그인 창 제작-->
+		<header class="welcome-header">
+			<h1 class="welcome-header__title">
+				Welcome to KOKOA CLONE
+			</h1>
+			<P class="welcome-header__text">
+				If you have a KOKOA Account,log in with your email or phone number.
+			</P>
+		</header>
+		<!--카카오톡 로그인 창에서 나오는 단락 부분만 적음. 
+		BEM을 활용하여 id 대신 겹칠 일이 없을 정도로 긴 이름의 class 활용-->
+		
+		<!--값을 입력받을 수 있는 창과 버튼 제작 -->
+		<form id="login-form">
+			<input type="text" placeholder="Email or phone number" />
+			<input type="text" placeholder="Password" />
+			<input type="submit" value="Log in" />
+			<input type="submit" value="Sign up" />
+			<a href="#">Find Kokoa Account or Password</a>
+		</form>
+		<!--placeholder를 통해 해당 칸에 무엇을 입력하는지 적음.
+		input type을 submit으로 받아 해당 칸을 입력이 가능한 버튼으로 만들었음.
+		로그인과 회원가입 버튼은 html의 button을 통해서도 만들 수 있음.-->
+		
+		
+		<!--fontawesome을 통한 아이콘을 html에 활용하기 위해서는 반드시 해당 구문을 <body> 마지막 부분에 넣어줘야 함.
+		그러지 않을 시 작동 X-->
+		<script
+				script src="https://kit.fontawesome.com/6478f529f2.js"
+crossorigin="anonymous"></script>
+	</body>
+</html>
