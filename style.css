@@ -9,7 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 }
-/* 기존에는 status-bar를 BEM에 의거하여 status-bar를 class로 지정하고 사용하고 싶었으나, 
+/* 기존에는 status-bar를 BEM에 의거하여 class로 지정하고 사용하고 싶었으나, 
 	원인 모를 오류로 인해 status-bar를 id로 지정하여 사용중.*/
 
 /*상단바를 정렬하는 CSS 기술. #status-bar에서 justify-content를 통해 정렬하는 게 예쁘게 되지 않을 때 사용*/
