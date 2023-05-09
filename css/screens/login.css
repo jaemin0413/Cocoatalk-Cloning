@@ -1,0 +1,80 @@
+.welcome-header {
+	margin: 90px 0px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* margin: 00px, 00px 라 설정시 상하, 좌우에 해당 픽셀만큼의 마진을 줌.
+	텍스트를 "가운데로 정렬" 후, flex를 사용하기 위해 display: flex 부여
+	기존 html 상에는 요소들이 좌에서 우로 배치되나, flex-direction: column 설정시 요소들이 상에서 하로 배치됨.
+	마지막으로 요소를 중앙에 배치*/
+	
+.welcome-header__title {
+	margin-bottom: 20px;
+	font-size: 25px;
+}
+
+
+.welcome-header__text {
+	width: 60%;
+	opacity: 0.7;
+}
+/*해당 텍스트의 너비를 제한하여 길어진 텍스트들을 줄바꿈할 수 있게 함.
+	opacity, 즉 불투명도를 설정하여 해당 텍스트의 색을 조절할 수도 있음.*/
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	margin: 0px 30px;
+}
+/*가로로 정렬된 login-form을 세로로 정렬하기 위해 display: flex; 추가 후 column 설정
+	좌우로 마진을 조금 줘 화면에 여유가 있게 함.*/
+
+.login-form input {
+	border: none;
+	padding: 15px 0px;
+	font-size: 18px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	margin-bottom: 25px;
+	transition: border-color 0.3s ease-in-out;
+}
+/*login-form 주변 테두리를 없앤 뒤, input 칸의 폭을 넓히기 위해 padding 사용.
+	폰트 크기를 키운 뒤 해당 항목에 연한 밑줄을 그어주기 위해 border-bottom 사용.
+	각 input 칸을 띄워주기 위해 margin-bottom을 주고, 특수효과를 위한 transition 사용.*/
+
+#login-form input:not([type="submit"]) {
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+transition: border-color 0.3s ease-in-out;
+}
+/*login-form input에서 not으로 제외한 요소를 제외하고 border-bottom과 transition 설정*/
+
+.login-form input:: placeholder {
+	color: rgba(0,0,0,0.4);
+}
+/*placeholder의 색을 좀 더 짙게 만들기 위해 사용.
+	::은 class나 id로 정의하지 않은 요소를 선택할 때 사용함. 
+	해당 css에서 placeholder는 정의되지 않은 요소이기 때문에 ::을 사용했음.*/
+
+.login-form input:focus {
+	border-color: var(--yellow);
+}
+/*variables css를 따로 만든 뒤 색을 변수로 정의해서 사용함. 
+	이렇게 하면 색을 사용할 때마다 rgba를 사용할 필요가 없음.*/
+
+.login-form input[type="submit"] {
+	background-color: var(--yellow);
+	cursor: pointer;
+	padding: 20px 0px;
+	border-radius: 5px; 
+}
+/*input과 괄호 사이에 띄어쓰기를 조심합시다... 띄어쓰기 오류만 나면 잘못된 거 찾느라 한세월이야*/
+
+.login-form a{
+	text-align: center;
+	text-decoration: none;
+	color: inherit;
+	font-size: 13px;
+}
+/*login-form의 링크를 꾸미는 코드. 텍스트를 가운데로 정렬하고, 링크에 기본적으로 설정된 밑줄을 제거하기 위해 text-decoration 제거
+	링크의 기본 색은 파란색이나, color: inherit을 사용하여 login-form의 기본 색상인 검은 색을 상속받아 사용됨. */
