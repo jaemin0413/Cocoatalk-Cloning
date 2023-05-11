@@ -10,8 +10,9 @@
 @import "variables.css";
 
 /*components*/
-@import "components/status-bar.css";	/*상단바*/
-@import "components/nav-bar.css";	/*네비게이션 바*/
+@import "components/status-bar.css";	/*상단 상태바*/
+@import "components/nav-bar.css";	/*하단 네비게이션 바*/
+@import "components/screen-header.css";	/*상단 화면*/
 
 /*screens*/
 
