@@ -1,0 +1,17 @@
+#friends-display-link {
+	display:flex;
+	justify-content:center;
+	background-color:#fafafa;
+	padding:15px 0px;
+	font-size:16px;
+}
+
+#friends-display-link i {
+	display:flex;
+	color: rgba(0,0,0,0.3);
+	align-items: center;
+	margin-right: 3px;
+	margin-left: 10px;
+}
+
+/*아이콘 위치가 평행하지 않아서 display:flex 부여해 수평축 맞춘 거 빼고 특이사항 없음*/

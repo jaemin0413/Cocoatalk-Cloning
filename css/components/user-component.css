@@ -1,0 +1,16 @@
+.user-component {
+	display: flex;
+	
+}
+
+.user-component__column:first-child {
+	display: flex;
+}
+
+
+
+
+/* user-component__column의 first-child를 칭하면 이미지만 잡히는 것이 아니라 h4 또한 같이 잡힌다.
+	user-component__column의 자식 코드에서 첫번째 아이라는 뜻이 아닌, 형제 코드의 첫번째 아이라는 뜻이기 때문.
+	형제 코드는 user-component__column의 클래스를 가지고 있는 두 번째 div이다.
+	import 한 다음에 제발 ; 잊지 말 것..*/
