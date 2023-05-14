@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Friends -Kokoa clone</title>
+		<title>Chats -Kokoa clone</title>
 	</head>
 	<body>
 		<!--기기 상단바 제작-->
@@ -24,71 +24,41 @@
 		<!--<div> 칸 총 3개를 활용하여 각 칸 안에 필요구문을 넣었고, fontawesome을 활용하여 적절한 icon을 넣음 -->
 		
 		<header class="screen-header">
-			<h1 class="screen-header__title">Friends</h1>
+			<h1 class="screen-header__title">Chats</h1>
 			<div class="screen-header__icons">
 				<span><i class="fas fa-search fa-lg"></i></span>
+				<span><i class="far fa-comment-dots fa-lg"></i></span>
 				<span><i class="fas fa-music fa-lg"></i></span>
 				<span><i class="fas fa-cog fa-lg"></i></span>
 			</div>
 		</header>
 		<!--코코아톡 상단 화면을 만드는 코드-->
 		
-		<a id="friends-display-link">
-			<i class="fas fa-exclamation-circle"></i>Friend's Names Display <i class="fas fa-chevron-right fa-xs"></i>
-		</a>
-		<!--friends names display 화면 만드는 코드.	
-		해당 파트는 재활용할 일이 없어 class 대신 id를 사용해봤다.-->
-		
-		<main class="friends-screen">
+		<main class="main-screen">
 			<div class="user-component">
 				<div class="user-component__column">
 					<img src="https://user-images.githubusercontent.com/95339052/237995348-aa608c4a-cdec-46f4-aea5-dd4960d99ce7.PNG" 
-					 class="user-component__avatar user-component__avatar--xl" />
+					 class="user-component__avatar" />
 					<div class="user-component__text">
 						<h4 class="user-component__title">
 						강해린
 						</h4>
-					<!--<h6 class="user-component__subtitle">
+						<h6 class="user-component__subtitle">
 						강해린은 귀엽다
-						</h6>-->
+						</h6>
 					</div>
 				</div>
 				<div class="user-component__column">
 				
 				</div>
 			</div>
-			<!--프로필을 만들기 위한 코드. 두 개의 user-component__column 클래스를 가진 div를 만들어 상단의 div 안에 프로필 사진과 이름을 넣을 수 있게 한다.
-				프로필 이미지가 개인 컴퓨터가 아닌 다른 곳에서도 적용될 수 있게 깃허브에 올린 후 이미지 링크를 따서 올렸고,
-				이미지를 딴 코드를 다른 곳에서도 활용하기 위해 user-component__avatar, user-component__avatar--xl 두 개의 클래스를 적용했다.
+			<!--main의 class명을 지정하고, style.css에 저장해둬 클래스명이 바뀌어도 계속 마진이 적용되도록 설정하였다.
+				
 				-->
 			
 			
-			<div class="friends-screen__channel">
-				<div class="friends-screen__channel-header">
-					<span>channel</span>
-					<i class="fas fa-chevron-up fa-xs"></i>
-				</div>
-				
-				<div class="user-component">
-				<div class="user-component__column">
-					<img src="https://user-images.githubusercontent.com/95339052/237995348-aa608c4a-cdec-46f4-aea5-dd4960d99ce7.PNG" 
-					 class="user-component__avatar user-component__avatar--sm" />
-					<div class="user-component__text">
-						<h4 class="user-component__title user-component__title--not-bold">
-						Channel
-						</h4>
-					</div>
-				</div>
-
-				<div class="user-component__column">
-					<span>2</span>
-					<i class="fas fa-chevron-right fa-xs"></i>
-				</div>
-			</div>
-			</div>
-			<!--channel을 만들기 위한 코드. 조금 작은 이미지를 불러오기 때문에 이 사진에도 두 개의 클래스를 적용함.
-				user-component__avatar user-component__avatar--xm 두 개의 클래스를 적용하여 css를 통해 사진을 프로필보다 조금 더 작게 만듬.<a
-				channel 글씨도 바꾸기 위해 두 개의 class를 적용함. -->
+			
+			
 			
 		</main>		
 		
@@ -101,21 +71,21 @@
 			<ul class="nav__list">
 				
 				<li class="nav__btn">
-					<a class="nav__link" href="friends.html"> <i class="fas fa-user fa-2x"></i> </a> 
+					<a class="nav__link" href="friends.html"> <i class="far fa-user fa-2x"></i> </a> 
 				</li>
 				
 				<li class="nav__btn">
-					<a class="nav__link" href="chats.html"> 
+					<a class="nav__link" href="#"> 
 						<span class="nav__notification">1</span>
-						<i class="far fa-comment fa-2x"></i> </a> 
+						<i class="fas fa-comment fa-2x"></i> </a> 
 				</li>
 				
 				<li class="nav__btn">
-					<a class="nav__link" href="find.html"> <i class="fas fa-search fa-2x"></i> </a> 
+					<a class="nav__link" href="#"> <i class="fas fa-search fa-2x"></i> </a> 
 				</li>
 				
 				<li class="nav__btn">
-					<a class="nav__link" href="more.html"> 
+					<a class="nav__link" href="#"> 
 						<span class="nav__dots">&nbsp;</span>
 						<i class="fas fa-ellipsis-h fa-2x"> </i> </a> 
 				</li>

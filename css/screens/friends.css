@@ -3,7 +3,8 @@
 	justify-content:center;
 	background-color:#fafafa;
 	padding:15px 0px;
-	font-size:16px;
+	font-size:18px;
+	margin-bottom:5px;
 }
 
 #friends-display-link i {
@@ -13,5 +14,25 @@
 	margin-right: 3px;
 	margin-left: 10px;
 }
-
 /*아이콘 위치가 평행하지 않아서 display:flex 부여해 수평축 맞춘 거 빼고 특이사항 없음*/
+
+.friends-screen {
+	padding: 0px var(--horizontal-space);
+}
+/*friends 화면에 있는 개체들을 상단 friends 글자에 맞춰 정렬하기 위한 코드
+	모든 요소들을 상위 요소인 main에 넣고 main에 마진을 주어, 모든 하위 요소들이 해당 마진을 갖게 한다..*/
+
+.friends-screen__channel {
+	margin-top:25px;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	padding-top:15px;
+}
+/*margin이 가장 바깥, border는 경계선, padding은 border 안. 기억할 것.*/
+
+.friends-screen__channel-header {
+	margin-bottom:30px;
+	display:flex;
+	justify-content:space-between;
+	color: rgba(0,0,0,0.5);
+}
+/*channel과 chevron 사이를 떨어뜨리는 코드*/

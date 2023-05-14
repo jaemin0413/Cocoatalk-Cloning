@@ -1,16 +1,61 @@
 .user-component {
-	display: flex;
-	
+	justify-content:space-between;
 }
 
+/* 첫 번째 user-componet에는 하위 요소가 하나뿐이기에 space-between 적용 x
+	두 번째 user-componet에는 하위 요소가 채널과 2>, 총 두 개의 요소가 있어 space-between을 통해 각 요소를 떨어뜨릴 수 있다.*/
+.user-component,
 .user-component__column:first-child {
 	display: flex;
+	align-items:center;
 }
-
-
-
 
 /* user-component__column의 first-child를 칭하면 이미지만 잡히는 것이 아니라 h4 또한 같이 잡힌다.
 	user-component__column의 자식 코드에서 첫번째 아이라는 뜻이 아닌, 형제 코드의 첫번째 아이라는 뜻이기 때문.
+	따라서 첫 번째 div class="user-component__column" 의 하위요소들이 모두 잡힌다.
 	형제 코드는 user-component__column의 클래스를 가지고 있는 두 번째 div이다.
 	import 한 다음에 제발 ; 잊지 말 것..*/
+
+.user-component__avatar{
+	width:70px;
+	height:70px;
+	border-radius:30px;
+	margin-right:20px;
+}
+
+.user-component__title {
+	font-weight:600;
+	font-size:22px;
+}
+
+.user-component__subtitle {
+	margin-top:8px;
+	font-size:17px;
+	color: rgba(0,0,0,0.5);
+}
+
+
+.user-component__avatar--xl {
+	width:80px;
+	height:80px;
+}
+
+.user-component__avatar--sm {
+	width:60px;
+	height:60px;
+	border-radius:25px;
+}
+
+/*프로필 사진과 채널 추천에 뜨는 사진, 채팅목록에서 뜨는 상대방의 프로필 사진은 모두 각각의 크기를 가지고 있다.
+	따라서 이미지에 두 개의 클래스를 부여하여 각각의 크기를 조절할 수 있게 한다.
+	모든 이미지에 공통적으로 적용돼야 하는 코드는 user-component__avatar를 통해 적용하고, 
+	프로필 사진의 크기는 user-component__avatar--xl  또는 sm을 통해 적용한다. */
+
+.user-component__title--not-bold{
+	font-weight:400;
+}
+/*두 개의 클래스가 적용된 채널 텍스트에, 한 클래스에 명령을 내려 채널 텍스트를 수정함.*/
+
+.user-component__column:last-child {
+	color: rgba(0,0,0,0.5);
+}

@@ -10,9 +10,9 @@
 @import "variables.css";
 
 /*components*/
-@import "components/status-bar.css";	/*상단 상태바*/
+@import "components/status-bar.css";	/*기기 상단바*/
 @import "components/nav-bar.css";	/*하단 네비게이션 바*/
-@import "components/screen-header.css";	/*상단 화면*/
+@import "components/screen-header.css";	/*코코오톡 상단 화면*/
 @import "components/user-component.css";	/*프로필 칸*/	
 
 /*screens*/
@@ -25,3 +25,7 @@ body {
 }
 /*해당 색을 기본색으로 지정하고 사용하기 위해 body에 적음.
 	이 프로젝트에 적용될 글꼴을 적음.*/
+
+.main-screen {
+	padding:0px var(--horizontal-space);
+}
