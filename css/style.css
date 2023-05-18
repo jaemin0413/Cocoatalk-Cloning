@@ -14,10 +14,12 @@
 @import "components/nav-bar.css";	/*하단 네비게이션 바*/
 @import "components/screen-header.css";	/*코코오톡 상단 화면*/
 @import "components/user-component.css";	/*프로필 칸*/	
+@import "components/badge.css";	/*알림 갯수*/
 
 /*screens*/
 @import "screens/login.css";	/*로그인 창*/
 @import "screens/friends.css";	/*상단 화면*/
+@import "screens/find.css";	/*우측 상단 설정 점*/
 
 body {
 	color:#2e363e;

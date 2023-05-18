@@ -1,0 +1,16 @@
+.screen-header__icons span{
+	position:relative;
+}
+
+.screen-header__icons-dots {
+	background-color: tomato;
+	display:flex;
+	width:5px;
+	height:5px;
+	border-radius:2.5px;
+	position:absolute;
+	right:-6px;
+	top:-7px;
+}
+
+/*6.21 이거 다시 해야 함. 아이콘 위치는 왜 바뀌는지;;*/

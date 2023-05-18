@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Chats -Kokoa clone</title>
+		<title>Find -Kokoa clone</title>
 	</head>
 	<body>
 		<!--기기 상단바 제작-->
@@ -24,12 +24,13 @@
 		<!--<div> 칸 총 3개를 활용하여 각 칸 안에 필요구문을 넣었고, fontawesome을 활용하여 적절한 icon을 넣음 -->
 		
 		<header class="screen-header">
-			<h1 class="screen-header__title">Chats</h1>
+			<h1 class="screen-header__title">Find</h1>
 			<div class="screen-header__icons">
 				<span><i class="fas fa-search fa-lg"></i></span>
-				<span><i class="far fa-comment-dots fa-lg"></i></span>
-				<span><i class="fas fa-music fa-lg"></i></span>
-				<span><i class="fas fa-cog fa-lg"></i></span>
+				<span>
+					<span class="screen-header__icons-dots">&nbsp;</span>
+					<i class="fas fa-cog fa-lg"></i>
+				</span>
 			</div>
 		</header>
 		<!--코코아톡 상단 화면을 만드는 코드-->
@@ -54,13 +55,7 @@
 				</div>
 			</div>
 			<!--main의 class명을 지정하고, style.css에 저장해둬 클래스명이 바뀌어도 계속 마진이 적용되도록 설정하였다.
-				
 				-->
-			
-			
-			
-			
-			
 		</main>		
 		
 		<!--내 프로필 항목을 만들기 위한 코드.
@@ -78,7 +73,7 @@
 				<li class="nav__btn">
 					<a class="nav__link" href="chats.html"> 
 						<span class="nav__notification badge">1</span>
-						<i class="fas fa-comment fa-2x"></i> </a> 
+						<i class="far fa-comment fa-2x"></i> </a> 
 				</li>
 				
 				<li class="nav__btn">

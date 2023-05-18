@@ -32,24 +32,11 @@
 /* nav__link에 position relative를 부여하면 nav__notification는 nav가 아닌 nav__link를 기준으로 움직이게 된다.*/
 
 .nav__notification {
-	background-color: tomato;
-	color:white;
-	display:flex;
-	width:30px;
-	height:30px;
-	border-radius:15px;
-	justify-content:center;
-	align-items:center;
-	font-weight:600px;
 	position:absolute;
 	left:15px;
 	bottom:15px;
 }
-/* 카톡이 한 개 온 것을 표현하기 위한 코드.
-	span에는 width와 height가 적용되지 않으므로, display:flex를 부여한 뒤 높이와 너비 설정, 높이와 너비의 절반만큼 border-radius 설정시 원을 만들 수 있음
-	원의 중앙에 내용을 오게 하기 위하여 가로축 정렬인 justify-content와 세로축 정렬인 align-items을 사용한다.
-	이후 원과 아이콘을 겹치게 하기 위해 position:absolute를 부여하고, nav__link에 position:relative를 부여해 nav__link를 기준으로 움직이게 한다.
-*/
+/*position absolute를 통해 해당 코드가 레이어에 겹치도록 설정*/
 
 .nav__dots {
 	background-color: tomato;

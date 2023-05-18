@@ -57,5 +57,16 @@
 /*두 개의 클래스가 적용된 채널 텍스트에, 한 클래스에 명령을 내려 채널 텍스트를 수정함.*/
 
 .user-component__column:last-child {
-	color: rgba(0,0,0,0.5);
+	color: rgba(0,0,0,0.4);
+	display:flex;
+	flex-direction:column;
+	align-items:flex-end;
+}
+/*마지막 user-component__column인 시간과 알람 갯수를 대상으로 한다.
+	시간과 알람 갯수를 우측 끝에 정렬하기 위해 flex-end를 사용하는데, 그러면 시간과 알람 갯수가 일렬로 정렬되기에 그 전에 정렬 방향을d
+	column으로 바꿔주어야 한다.*/
+
+.user-component__time{
+	margin-bottom:10px;
+
 }

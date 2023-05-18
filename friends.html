@@ -81,14 +81,20 @@
 				</div>
 
 				<div class="user-component__column">
-					<span>2</span>
-					<i class="fas fa-chevron-right fa-xs"></i>
+					<div>
+						<span>2</span>
+						<i class="fas fa-chevron-right fa-xs"></i>
+					</div>
 				</div>
 			</div>
 			</div>
 			<!--channel을 만들기 위한 코드. 조금 작은 이미지를 불러오기 때문에 이 사진에도 두 개의 클래스를 적용함.
-				user-component__avatar user-component__avatar--xm 두 개의 클래스를 적용하여 css를 통해 사진을 프로필보다 조금 더 작게 만듬.<a
+				user-component__avatar user-component__avatar--xm 두 개의 클래스를 적용하여 css를 통해 사진을 프로필보다 조금 더 작게 만듬.
 				channel 글씨도 바꾸기 위해 두 개의 class를 적용함. -->
+			
+			<!--chats에서 시간과 알림 갯수를 정렬하기 위해 user-component__column에 flex-direction:column;를 적용했다.
+				따라서 friends 창의 user-component__column도 망가졌는데, 이때의 해결법으로는 user-component__column 안에 div를 하나 더 만들면 된다.
+				해당 css는 user-component__column의 last child를 칭하는 것이지 그 안의 div까지 칭하는 게 아니기 때문.-->
 			
 		</main>		
 		
@@ -106,7 +112,7 @@
 				
 				<li class="nav__btn">
 					<a class="nav__link" href="chats.html"> 
-						<span class="nav__notification">1</span>
+						<span class="nav__notification badge">1</span>
 						<i class="far fa-comment fa-2x"></i> </a> 
 				</li>
 				
