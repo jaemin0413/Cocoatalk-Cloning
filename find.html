@@ -28,39 +28,76 @@
 			<div class="screen-header__icons">
 				<span><i class="fas fa-search fa-lg"></i></span>
 				<span>
-					<span class="screen-header__icons-dots">&nbsp;</span>
 					<i class="fas fa-cog fa-lg"></i>
+					<span class="screen-header__icons-dots">&nbsp;</span>
 				</span>
 			</div>
 		</header>
 		<!--코코아톡 상단 화면을 만드는 코드-->
 		
 		<main class="main-screen">
-			<div class="user-component">
-				<div class="user-component__column">
-					<img src="https://user-images.githubusercontent.com/95339052/237995348-aa608c4a-cdec-46f4-aea5-dd4960d99ce7.PNG" 
-					 class="user-component__avatar" />
-					<div class="user-component__text">
-						<h4 class="user-component__title">
-						강해린
-						</h4>
-						<h6 class="user-component__subtitle">
-						강해린은 귀엽다
-						</h6>
-					</div>
+			<div class="find-icons">
+				<div class="find-icons__icon">
+					<i class="fas fa-qrcode"></i>
+					<span>QR code</span>
 				</div>
-				<div class="user-component__column">
-					<span class="user-component__time">11:11</span>
-					<span class="badge">6</span>
-				</div>
+				<div class="find-icons__icon">
+					<i class="far fa-address-book"></i>
+					<span>Add by Contacts</span>
+				</div>				
+				<div class="find-icons__icon">
+					<i class="fas fa-fingerprint"></i>
+					<span>Add by ID</span>
+				</div>				
+				<div class="find-icons__icon">
+					<i class="far fa-envelope"></i>
+					<span>Invite</span>
+				</div>				
 			</div>
-			<!--main의 class명을 지정하고, style.css에 저장해둬 클래스명이 바뀌어도 계속 마진이 적용되도록 설정하였다.
-				-->
+			<!--find 칸의 아이콘들을 넣는 코드-->
+			
+			<div class="recommended-friends">
+				<h6 class="recommended-friends__title">
+					Recommended Friends
+				</h6>
+				<span>You have no recommended friends.</span>
+			</div>
+			<!--추천 친구 칸을 만드는 코드-->
+			
+			<div class="openchat">
+				<div class="openchat-header">
+					<span>Open Chat</span>
+					<span>Go to Openchat Home <i class="fas fa-chevron-right fa-xs"></i></span>
+				</div>
+				
+				<div class="openchat-box">
+					<div class="openchat-box__column">
+						<h5 class="openchat-box__title">바니즈</h5>
+						<h6 class="openchat-box__hashtags">#뉴진스#newjeans#새청바지</h6>
+					
+						<div class="openchat-box__members">
+							<img src="#"/>
+							<span class="openchat-box__member-count">2023 members</span>|
+							<span class="openchat-box__member-status">Active</span>
+						</div>
+					</div>
+				
+					<!--
+					<div class="openchat-box__column">
+						<img src="https://user-images.githubusercontent.com/95339052/239689664-740b9b7e-0636-4bbb-a19d-0abcfb4f4e42.jpeg"
+						 class="openchats-avatar"/>
+					</div>
+					-->	
+			</div>
+				
+			</div>
+			
+
+
+			
 		</main>		
 		
-		<!--내 프로필 항목을 만들기 위한 코드.
-			상단의 friends 글자에 맞춰서 프로필들을 정렬해야 하기 때문에, main에 담아 전체 요소들에 패딩을 줌.
-			-->
+		<!--만드는 화면이 달라졌어도 padding을 부여하는 main은 항상 활용해야 함.-->
 		
 		
 		<nav class="nav">
