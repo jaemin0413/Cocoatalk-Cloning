@@ -63,6 +63,8 @@
 	font-size:18px;
 	color:rgba(0,0,0,0.5);
 }
+/* recommended-friends 칸을 만드는 코드*/
+
 
 .openchat-header {
 	display:flex;
@@ -70,4 +72,76 @@
 	color:rgba(0,0,0,0.5);
 	margin-bottom:25px;
 }
+/*openchat의 두 스판 사이를 띄어둠*/
 
+.openchat-box {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+.openchat-box__title {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.openchat-box__hashtags {
+	opacity:0.6;
+}
+/*모든 글자를 대문자로 만드는 코드*/
+
+.openchat-box__members {
+	margin-top:7px;
+	display:flex;
+	align-items:center;
+}
+/*members에 해당하는 요소들을 가로로 정렬하기 위한 코드*/
+
+.openchat-box__members img {
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	margin-right:5px;
+}
+
+.openchat-box__member-count {
+	opacity:0.5;
+	font-size:14px;
+}
+/*span에 class를 부여하지 않고 .openchat-box__members:second-child를 사용하려 해보았으나 적용이 안 됐음.
+	이유를 찾고 있으나 아직까지는 잘 모르겠음. 그냥 span에 class를 부여한 후 진행 예정.*/
+
+.openchat-box__member-status {
+	color:#ffb0e0;
+}
+
+.openchats-avatar {
+	width:120px;
+	height:120px;
+	border-radius:10px;
+}
+/*토끼사진*/
+
+.openchats-avatarbox {
+	position:relative;
+}
+/*img가 inline 요소이기 때문에, position:relative는 적용이 불가능하다.
+	따라서 이미지를 감싸는 div인 openchats-avatarbox를 만든 뒤 여기에 position:relative를 부여해 위치를 옮길 수 있다. */
+
+.openchat-box__heart-count {
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+	display:flex;
+	padding:5px;
+	border-radius:20px;
+	align-items:center;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	font-size:14px;
+}
+
+.openchat-box__heart-count span {
+	margin-left:3px;
+}
