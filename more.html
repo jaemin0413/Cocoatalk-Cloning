@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Find -Kokoa clone</title>
+		<title>More -Kokoa clone</title>
 	</head>
 	<body>
 		<!--기기 상단바 제작-->
@@ -24,93 +24,82 @@
 		<!--<div> 칸 총 3개를 활용하여 각 칸 안에 필요구문을 넣었고, fontawesome을 활용하여 적절한 icon을 넣음 -->
 		
 		<header class="screen-header">
-			<h1 class="screen-header__title">Find</h1>
+			<h1 class="screen-header__title">More</h1>
 			<div class="screen-header__icons">
 				<span><i class="fas fa-search fa-lg"></i></span>
-				<span>
-					<i class="fas fa-cog fa-lg"></i>
-					<span class="screen-header__icons-dots">&nbsp;</span>
-				</span>
+				<span><i class="fas fa-music fa-lg"></i></span>
+				<span><i class="fas fa-cog fa-lg"></i></span>
 			</div>
 		</header>
 		<!--코코아톡 상단 화면을 만드는 코드-->
 		
-		<main class="main-screen">
+		<main class="main-screen more-screen">
+			<div class="user-component">
+				<div class="user-component__column">
+					<img src="https://user-images.githubusercontent.com/95339052/237995348-aa608c4a-cdec-46f4-aea5-dd4960d99ce7.PNG" 
+					 class="user-component__avatar user-component__avatar--xl" />
+					<div class="user-component__text">
+						<h4 class="user-component__title">
+						강해린
+						</h4>
+						<h6 class="user-component__subtitle">
+						+082 10-2003-0515 
+						<i class="fas fa-exclamation-circle"></i>
+						</h6>
+					</div>
+				</div>
+				<div class="user-component__column">
+					<i class="far fa-comment-alt fa-2x"></i>				
+				</div>
+			</div>
+			<!--Friends에서 쓴 프로필 사진 재활용-->
+			
 			<div class="icon-row">
-				<div class="icon-row__icon">
-					<i class="fas fa-qrcode"></i>
-					<span>QR code</span>
-				</div>
-				<div class="icon-row__icon">
-					<i class="far fa-address-book"></i>
-					<span>Add by Contacts</span>
-				</div>				
-				<div class="icon-row__icon">
-					<i class="fas fa-fingerprint"></i>
-					<span>Add by ID</span>
-				</div>				
-				<div class="icon-row__icon">
-					<i class="far fa-envelope"></i>
-					<span>Invite</span>
-				</div>				
-			</div>
-			<!--find 칸의 아이콘들을 넣는 코드-->
-			
-			<div class="recommended-friends">
-				<h6 class="recommended-friends__title">
-					Recommended Friends
-				</h6>
-				<span>You have no recommended friends.</span>
-			</div>
-			<!--추천 친구 칸을 만드는 코드-->
-			
-			<div class="openchat">
 				
-				<div class="openchat-header">
-					<span>Open Chat</span>
-					<span>Go to Openchat Home <i class="fas fa-chevron-right fa-xs"></i></span>
+				<div class="icon-row__icon">
+					<i class="far fa-calendar-check"></i>
+					<span>Calendar</span>
 				</div>
 				
-				<div class="openchat-box">
-					<div class="openchat-box__column">
-						<h5 class="openchat-box__title">바니즈</h5>
-						<h6 class="openchat-box__hashtags">#뉴진스#newjeans#새청바지</h6>
-					
-						<div class="openchat-box__members">
-							<img src="https://user-images.githubusercontent.com/95339052/239689664-740b9b7e-0636-4bbb-a19d-0abcfb4f4e42.jpeg"/>
-							<span class="openchat-box__member-count">2023 members</span>|
-							<span class="openchat-box__member-status">Active</span>
-						</div>
-					</div>
+				<div class="icon-row__icon">
+					<i class="fas fa-archive"></i>
+					<span>Talk Drive</span>
+				</div>				
 				
-					
-					<div class="openchat-box__column">
-						<div class="openchats-avatarbox">
-							<img src="https://user-images.githubusercontent.com/95339052/239689664-740b9b7e-0636-4bbb-a19d-0abcfb4f4e42.jpeg"
-							 class="openchats-avatar"/>
-							<div class="openchat-box__heart-count fa-xs">
-								<i class="fas fa-heart"></i><span>413</span>
-							</div>
-						</div>
-					</div>
-						
-				</div>
+				<div class="icon-row__icon">
+					<i class="far fa-smile"></i>
+					<span>Emoticons</span>
+				</div>				
 				
-			</div>
-			
+				<div class="icon-row__icon">
+					<i class="fas fa-brush"></i>
+					<span>Themes</span>
+				</div>				
 
+			</div>
+			<!--find 칸의 아이콘들을 넣는 코드 재활용-->
+
+			<div class="more-suggestions">
+				<h4 class="more-suggestions__title">Suggestions</h4>
+				<div class="more-suggestions__icon">
+					<div class="more-suggestions__icon-image">
+						<i class="fas fa-quote-right"></i>						
+					</div>
+					<span class="more-suggestions__icon-text">Kokoa story</span>
+				</div>				
+			</div>
+			<!--suggestion 창 쓰는 코드-->
 
 			
 		</main>		
 		
-		<!--만드는 화면이 달라졌어도 padding을 부여하는 main은 항상 활용해야 함.-->
-		
+
 		
 		<nav class="nav">
 			<ul class="nav__list">
 				
 				<li class="nav__btn">
-					<a class="nav__link" href="friends.html"> <i class="far fa-user fa-2x"></i> </a> 
+					<a class="nav__link" href="friends.html"> <i class="fas fa-user fa-2x"></i> </a> 
 				</li>
 				
 				<li class="nav__btn">

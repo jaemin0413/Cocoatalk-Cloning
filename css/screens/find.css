@@ -17,32 +17,6 @@
 	해당 css를 적용하니 아이콘의 위치가 변화하는 등의 오류가 있었으나, find.html에서 icon과 span의 위치를 바꾸고
 	screen-header__icons span의 영억을 확인한 후 위치를 조정하니 오류가 해결되었음.*/
 
-.find-icons {
-	display:flex;
-	justify-content:space-between;
-	padding-bottom:25px;
-}
-/*rgba랑 괄호 띄면 적용 안 됨...제발...*/
-
-.find-icons__icon {
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-}
-/*flex-direction:column을 하면 주축이 수평에서 수직으로 변한다. 
-	span을 icon 중앙에 정렬할 수 있도록 align item 사용*/
-
-.find-icons__icon i{
-	font-size:35px;
-}
-/*find-icons__icon i은 find-icons__icon 안에 있는 i에만 적용한다는 소리임.
-	자주 쓰니 기억할 것.*/
-
-.find-icons__icon span {
-	margin-top:15px;
-}
-/*아이콘과 글자 사이를 떨어뜨려놓는 코드*/
-
 .recommended-friends {
 	margin:25px 0px;
 	padding:25px 0px;

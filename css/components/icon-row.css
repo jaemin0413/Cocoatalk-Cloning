@@ -1,0 +1,26 @@
+
+.icon-row{
+	display:flex;
+	justify-content:space-between;
+	padding-bottom:25px;
+}
+/*rgba랑 괄호 띄면 적용 안 됨...제발...*/
+
+.icon-row__icon {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+/*flex-direction:column을 하면 주축이 수평에서 수직으로 변한다. 
+	span을 icon 중앙에 정렬할 수 있도록 align item 사용*/
+
+.icon-row__icon i{
+	font-size:35px;
+}
+/*icon-row__icon i은 icon-row__icon 안에 있는 i에만 적용한다는 소리임.
+	자주 쓰니 기억할 것.*/
+
+.icon-row__icon span {
+	margin-top:15px;
+}
+/*아이콘과 글자 사이를 떨어뜨려놓는 코드*/
