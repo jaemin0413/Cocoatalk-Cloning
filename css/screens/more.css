@@ -1,13 +1,50 @@
 .more-screen .icon-row {
 	margin-top:35px;
 }
+/*main에 두 개의 클래스를 부여한 뒤 more-screen을 통해 마진을 부여함.*/
 
 .more-suggestions {
 	margin-top:50px;
 	border-top:var(--main-border);
 	padding-top:40px;
 }
+/*suggestions을 만드는 코드*/
+
 
 .more-suggestions__title {
 	margin-bottom:30px;
 }
+
+.more-suggestions__icons {
+	display:flex;
+}
+/*해당 코드를 통해 아이콘들이 수평하게 정렬될 수 있게 함*/
+
+.more-suggestions__icon {
+	margin-right:30px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:10px;
+}
+/*해당 코드를 통해 텍스트가 아이콘 중앙 하단에 오게 한다. */
+
+.more-suggestions__icon-image {
+	width:60px;
+	height:60px;
+	background-color: var(--yellow);
+	border-radius:10px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:10px;
+}
+/*해당 코드를 통해 아이콘 배경으로 노란색을 줘 그럴듯하게 만든다*/
+
+.more-suggestions__icon-image i {
+	font-size:32px;
+	color:white;
+}
+
+/*이후에 아이콘 두 줄로 만들어보기*/

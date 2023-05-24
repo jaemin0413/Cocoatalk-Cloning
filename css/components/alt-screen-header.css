@@ -1,0 +1,7 @@
+.alt-header {
+	display:flex;
+	justify-content:space-between;
+	padding: 40px 25px 20px;
+	align-items:center;
+	margin-bottom:15px;
+}

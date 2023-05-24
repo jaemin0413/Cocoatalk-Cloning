@@ -10,9 +10,13 @@
 	display:flex;
 	flex-direction:column;
 	align-items:center;
+	width:80px;
+	height:70px;
 }
 /*flex-direction:column을 하면 주축이 수평에서 수직으로 변한다. 
-	span을 icon 중앙에 정렬할 수 있도록 align item 사용*/
+	span을 icon 중앙에 정렬할 수 있도록 align item 사용
+	icon-row__icon에 width와 height를 줘 아이콘이 들어갈 공간을 일정하게 만든다.
+	해당 방법을 통해서 아이콘을 두 줄을 만들었을 때 요소마다 너비와 높이가 달라 정렬이 일정하게 안 되던 문제를 해결했다.*/
 
 .icon-row__icon i{
 	font-size:35px;
@@ -24,3 +28,8 @@
 	margin-top:15px;
 }
 /*아이콘과 글자 사이를 떨어뜨려놓는 코드*/
+
+.icon-blank {
+	opacity:0;
+}
+/*안 쓰는 아이콘을 가리는 코드*/
