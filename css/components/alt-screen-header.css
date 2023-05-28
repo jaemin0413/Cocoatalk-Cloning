@@ -1,7 +1,26 @@
 .alt-header {
-	display:flex;
-	justify-content:space-between;
-	padding: 40px 25px 20px;
-	align-items:center;
+	padding: var(--horizontal-space);
 	margin-bottom:15px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
+
+.alt-header__title {
+	font-size:32px;
+	font-weight:600;
+}
+
+.alt-header__column:first-child {
+	margin-right:auto;
+}
+/*우측의 빈 공간에 마진을 자동으로 입력하여 채운다. 
+	따라서 아이콘을 alt-header의 좌측 끝에 붙이고, 아이콘의 우측 끝과 settings 사이의 빈 공간이 모두 마진으로 채워진다.*/
+
+.alt-header__column:last-child {
+	margin-left:auto;
+}
+/*좌측의 빈 공간에 마진을 자동으로 입력하여 채운다.
+	따라서 아이콘을 alt-header의 우측 끝에 붙이고, 아이콘의 좌측 끝과 settings 사이의 빈 공간이 모두 마진으로 채워진다.*/
+
+/*margin-auto는 요소를 중앙에 정렬할 때도 사용할 수도 있다.*/

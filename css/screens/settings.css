@@ -1,0 +1,19 @@
+.settings__setting {
+	padding:20px 0;
+	font-size:18px;
+	display:flex;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	justify-content:space-between;
+	align-items:center;
+}
+/*div가 tab을 통해 제대로 정리되지 않으면 코드가 적용이 안 됨. 조심할 것.*/
+
+.settings__setting i {
+	opacity:0.8;
+	margin-right:20px;
+	font-size:22px;
+}
+
+.settings__setting-column:last-child {
+	opacity:0.5;
+}
