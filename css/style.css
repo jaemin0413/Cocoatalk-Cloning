@@ -24,6 +24,7 @@
 @import "screens/find.css";	/*우측 상단 설정 점*/
 @import "screens/more.css"; /*more 창*/
 @import "screens/settings.css";	/*setting 창*/
+@import "screens/chat.css";	/*chatting 창*/
 
 body {
 	color:#2e363e;

@@ -1,0 +1,69 @@
+.chat-screen {
+	background-color:#abc1d1;
+	height:1000vh;
+}
+
+.chat-screen .alt-header {
+	top:0;
+	position:fixed;
+	width:100%;
+	box-sizing:border-box;
+}
+/*상단 가장 위에 고정하는 코드. 
+	width 100%를 줘 상단바가 넓게 펼쳐지도록 하고, box-sizing을 통해 화면 넓이를 초과하여 안 보이는 부분을 border-box만큼 제한하여 모든 상단바가 보이도록 한다.*/
+
+.alt-header .status-bar {
+	background-color:#abc1d1;
+}
+/*해당 코드에서 배경색을 적용했을 때 채팅들이 내려가는 이유는 ,상단바들이 fixed된 상태라 다른 레이어에 있기 때문이다.
+	다만 이럴 때 alt-header의 배경색으로 인해 status-bar가 가리게 되는데, 이때는 z-index로 해결할 수 있다.*/
+
+.alt-header {
+	top:10px;
+	z-index:1;
+}
+
+.status-bar {
+	z-index:2;
+}
+/*z-index는 레이어의 순서를 나타내는 것으로, 설정된 값이 없다면 0으로 취급된다.
+	z-index의 값이 클수록 레이어가 위에 있게 된다.
+	현재 다른 모든 요소들의 z-index 값이 없으므로, status-bar가 가장 상단으로 올라오게 된다.
+	*/
+
+.alt-header__column span:last-child  {
+	margin-left:20px;
+}
+
+.main-chat {
+	margin-top:120px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+/*main에 마진을 두어 fixed된 상단바와 레이어가 안 겹치게 함.
+	채팅은 상단에서 하단으로 이어지므로, flex-direction을 column으로 바꾼다.
+	방향을 column으로 바꾸면 가로축과 세로축이 뒤바뀌므로, 날짜를 중앙에 두기 위해 justify-content 대신 align-items를 썼다.
+	*/
+
+.chat__timestamp {
+	color:white;
+	background-color:#92a4b2;
+	padding:15px;
+	border-radius:25px;
+	font-size:14px;
+	margin-bottom:25px;
+}
+
+.message-row {
+	width:100%;
+	display:flex;
+	
+}
+
+.message-row img {
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	margin-right:15px;
+}

@@ -6,10 +6,19 @@
 	justify-content:center;
 }
 
+.alt-header__column {
+	width:33%;
+}
+/*각 alt-header__column마다 너비를 33%씩만 갖도록 함. 
+	css에서 absolute를 통해 중앙 정렬하는 것은 이상하게 보이기 때문에 이와 같은 방법을 택함.*/
+
 .alt-header__title {
 	font-size:32px;
 	font-weight:600;
+	text-align:center;
 }
+/*타이틀에 해당하는 너비가 33%만큼 생겼다. 
+	따라서 이 텍스트가 배정된 너비의 중앙에 오도록 정렬해준다.*/
 
 .alt-header__column:first-child {
 	margin-right:auto;
@@ -18,9 +27,11 @@
 	따라서 아이콘을 alt-header의 좌측 끝에 붙이고, 아이콘의 우측 끝과 settings 사이의 빈 공간이 모두 마진으로 채워진다.*/
 
 .alt-header__column:last-child {
-	margin-left:auto;
+	display:flex;
+	justify-content:flex-end;
 }
-/*좌측의 빈 공간에 마진을 자동으로 입력하여 채운다.
-	따라서 아이콘을 alt-header의 우측 끝에 붙이고, 아이콘의 좌측 끝과 settings 사이의 빈 공간이 모두 마진으로 채워진다.*/
+/*33%만큼 배정된 너비의 좌측 끝에 가도록 함.*/
 
+
+..
 /*margin-auto는 요소를 중앙에 정렬할 때도 사용할 수도 있다.*/
