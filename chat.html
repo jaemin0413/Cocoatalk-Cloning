@@ -53,7 +53,7 @@
 				
 				<div class="message-row__box">
 					
-					<span class="message-row__opponent">김민지</span>
+					<span class="message-opponent">김민지</span>
 					<div class="message-row__content">
 						<span class="message__bubble">강해린 이상하다</span>
 						<span class="message__time">22:49</span>
@@ -67,9 +67,38 @@
 				메세지 박스는 채팅 상대의 이름, 채팅 내용, 보낸 시간, 총 3가지로 이루어져 있다.
 				메세지 박스에 상대 이름을 넣고, 하위 div를 하나 만들어 채팅 내용과 시간을 넣을 수 있도록 하였다.-->
 			
+			<div class="message-row message-row--own">
+				
+				<div class="message-row__box">
+
+					<div class="message-row__content">
+						<span class="message__bubble">강해린 이상하다</span>
+						<span class="message__time">22:49</span>
+					</div>
+				</div>
+			</div>
+			<!--내가 상대방에게 채팅을 보내게 하는 코드. -->
+			
 		</main>		
 		<!--main에 main-chat 클래스를 더해 fixed 된 상단바로 인해 짤리는 요소들을 보이게 한다..-->
 
+		<form class="reply">
+		
+			<div class="reply__column">
+				<i class="far fa-plus-square fa-lg"></i>
+			</div>
+			
+			<div class="reply__column">
+				<input type="text" placeholder="Write a message..."/>
+				<i class="far fa-smile fa-lg"></i>
+				<button>
+					<i class="fas fa-arrow-up"></i>
+				</button>
+			</div>
+		</form>
+		<!--대화 입력창을 만드는 코드. 
+			하나의 form을 만든 뒤 +버튼, 입력창. 총 두 개의 column으로 분리했다.
+			전송버튼은 버튼 칸을 만들어 실제로 눌리도록 만들었다.-->
 		
 
 		

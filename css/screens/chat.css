@@ -10,7 +10,8 @@
 	box-sizing:border-box;
 }
 /*상단 가장 위에 고정하는 코드. 
-	width 100%를 줘 상단바가 넓게 펼쳐지도록 하고, box-sizing을 통해 화면 넓이를 초과하여 안 보이는 부분을 border-box만큼 제한하여 모든 상단바가 보이도록 한다.*/
+	width 100%를 줘 상단바가 화면을 모두 차지하도록 한다.
+	이때 우측 상단 끝 아이콘이 잘리는데, box-sizing을 통해 화면에 보이는 부분을 border-box만큼으로 제한하여 상단바가 잘리지 않고 모두 보이도록 한다.*/
 
 .alt-header .status-bar {
 	background-color:#abc1d1;
@@ -29,11 +30,14 @@
 /*z-index는 레이어의 순서를 나타내는 것으로, 설정된 값이 없다면 0으로 취급된다.
 	z-index의 값이 클수록 레이어가 위에 있게 된다.
 	현재 다른 모든 요소들의 z-index 값이 없으므로, status-bar가 가장 상단으로 올라오게 된다.
+	z-index가 많이 사용될수록 코드의 제작, 유지, 보수가 오래 걸리므로 사용을 최소화 해야 한다.
 	*/
 
 .alt-header__column span:last-child  {
 	margin-left:20px;
 }
+/*chat 창에서는 우측 상단에 이모티콘이 하나 더 생겼다. 
+	아이콘간의 간격을 주기 위한 코드*/
 
 .main-chat {
 	margin-top:120px;
@@ -54,16 +58,172 @@
 	font-size:14px;
 	margin-bottom:25px;
 }
+/*채팅이 시작된 날을 화면 중앙 상단에 나타내는 코드.*/
 
 .message-row {
 	width:100%;
 	display:flex;
-	
+	margin-bottom:25px;
 }
+/*카톡 상대에 해당하는 박스. 
+	채팅 날짜를 중앙에 정렬하기 위한 코드에 채팅 박스까지 영향을 받아 중앙에 정렬되었다.
+	따라서 width 100을 주어 채팅 박스가 모든 가로열을 사용하게 하였다.
+	이후 display flex를 통해 모든 div들이 옆에 오도록 하였다.*/
+
 
 .message-row img {
-	width:100px;
-	height:100px;
+	width:50px;
+	height:50px;
 	border-radius:50%;
 	margin-right:15px;
 }
+
+.message-opponent {
+	font-weight:600;
+	opacity:0.8;
+	font-size:14px;
+	display:block;
+	margin-bottom:5px;
+}
+/*상대방의 이름을 꾸미는 코드.
+	이름과 메세지 내용 사이에 공간이 있는데, 이름은 span이므로 block 속성을 부여하여 margin을 주었다.*/
+
+.message-row__content {
+	display:flex;
+	align-items:flex-end;
+}
+/*메세지 내용과 보낸 시간을 꾸미는 코드.
+	수직선으로 요소를 이동하는 align items를 통해 시간을 flex박스 끝에 보내도록 했다.*/
+
+.message__bubble {
+	background-color:white;
+	padding:10px 13px;
+	border-radius:15px;
+	border-top-left-radius:0px;
+	margin-right:5px;
+	font-size:18px;
+}
+/*메세지 내용을 꾸미는 코드.
+	border-top-left-radius를 통해 어느 한 곳의 radius만 수정할 수 있다.*/
+
+.message__time {
+	opacity:0.8;
+	font-size:14px;
+}
+
+.message-row--own {
+	justify-content:flex-end;
+}
+/*본인이 보낸 채팅을 꾸미는 코드.
+	flex-end를 통해 flexbox의 수평축 끝에 요소를 보냄.	
+
+	modifier를 이용하여 html코드를 크게 수정하지 않고 채팅창을 바꿀 수 있음.
+	flex-children의 경우 order 코드를 통해 말풍선과 시간의 순서를 바꾸거나,
+	flex-direction:reverse를 통해 바꿀 수 있음.
+	*/
+
+.message-row--own .message__bubble {
+	background-color: var(--yellow);
+	border-top-right-radius:0px;
+	border-top-left-radius:15px;
+	margin-left:5px;
+	margin-right:0px;
+}
+/*말풍선의 색과 방향을 바꾸는 코드*/
+
+
+/*
+.message-row--own .message__time {
+	order: 0;
+}
+
+.message-row--own .message__bubble {
+	order: 1;
+}
+*/
+/*order를 통해 화면에 나오는 요소의 순서를 바꾸는 코드. flex-childrend에게만 적용됨.
+	이를 사용하여 시간과 말풍선의 순서를 바꿀 수도 있지만, 아래의 방법이 더 좋기에 그로 적용했음.*/
+
+.message-row--own .message-row__content {
+	flex-direction:row-reverse;
+}
+/*화면과 시간의 좌우 정렬을 바꾸는 코드.*/
+
+.reply {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	box-sizing:border-box;
+	background-color:white;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:5px 25px;
+}
+/*대화 입력창을 꾸미는 코드.
+	스크롤이 내려가도 해당 창은 있어야 하기에 고정시켰다.
+	width를 100%로 준 뒤, 화면에서 잘리는 걸 방지하기 위해 border-box만큼 보이는 부분을 제한한다.
+	space-between을 통해 두 개의 column을 분리하고, 정렬했다.*/
+
+.reply .reply__column:first-child {
+	width:5%;
+}
+
+.reply .reply__column:last-child {
+	width:95%;
+	position:relative;
+}
+/*input에 width를 주기 위해서는 부모 요소인 reply__column에도 width가 있어야 한다.
+	따라서 width를 부여했다.
+	또한 이모티콘들을 absolute를 통해 조정하기 위해 두 번째 column에 position:relative를 줬다.
+	
+	.reply .reply__column는 선택자의 구체성을 높이기 위해 사용함.
+	.reply__column를 써도 같은 결과가 나온다.*/
+
+.reply i {
+	opacity:0.5;
+}
+/*아이콘들의 불투명도를 낮췄다.*/
+
+.reply input {
+	padding:0px 12px ;
+	height:30px;
+	width:100%;
+	border:var(--main-border);
+	border-radius:20px;
+}
+/*reply에 width를 주기 위해서는 column에 먼저 width를 줘야 한다.
+	부모 요소에 width가 없는데 자식 요소에 width가 있을 수는 없기 때문이다.*/
+
+.reply__column:last-child > i, 
+.reply button {
+	position:absolute;
+	right:-22px;
+	top:2px;
+}
+/*두 개의 아이콘을 동시에 움직이기 위해 컴마로 연결해 코드를 작성했다.*/
+
+.reply__column:last-child > i {
+	right:15px;
+	top:10px;
+}
+/*이모티콘 아이콘을 추가로 조정함.*/
+
+.reply__column button {
+	background-color:var(--yellow);
+	border:none;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+}
+/*버튼을 꾸미는 코드*/
+
+.reply__column button i {
+	opacity:1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+	outline:none;
+}
+/*버튼을 눌러도 아무런 효과가 없게 함.*/
