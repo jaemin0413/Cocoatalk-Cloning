@@ -1,6 +1,11 @@
+.chats-screen {
+	margin-bottom:20px;
+}
+/*chats 창에 쓰는 코드인데 놓을 곳이 마땅찮아서 여기에 적음.*/
+
 .chat-screen {
 	background-color:#abc1d1;
-	height:1000vh;
+	height:300vh;
 }
 
 .chat-screen .alt-header {
@@ -39,11 +44,23 @@
 /*chat 창에서는 우측 상단에 이모티콘이 하나 더 생겼다. 
 	아이콘간의 간격을 주기 위한 코드*/
 
+@keyframes fadeIn {
+	from {
+		transform: translateY(30px);
+	}
+	
+	to {
+		transform:none;
+		opacity:1;
+	}
+}
+
 .main-chat {
 	margin-top:120px;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
+	animation:fadeIn 0.8s linear;
 }
 /*main에 마진을 두어 fixed된 상단바와 레이어가 안 겹치게 함.
 	채팅은 상단에서 하단으로 이어지므로, flex-direction을 column으로 바꾼다.
@@ -191,6 +208,7 @@
 	width:100%;
 	border:var(--main-border);
 	border-radius:20px;
+	transition: all 0.3s ease-in-out;
 }
 /*reply에 width를 주기 위해서는 column에 먼저 width를 줘야 한다.
 	부모 요소에 width가 없는데 자식 요소에 width가 있을 수는 없기 때문이다.*/
@@ -227,3 +245,21 @@
 	outline:none;
 }
 /*버튼을 눌러도 아무런 효과가 없게 함.*/
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+	transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+	opacity:0;
+}
+/*reply:focus-within-> reply 안에 focus 된 부분이 있으면 작동하게 하는 코드.*/
+
+.reply:focus-within input {
+	width:98vw;
+	transform:translateX(-6%);
+}

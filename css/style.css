@@ -17,6 +17,7 @@
 @import "components/badge.css";	/*알림 갯수*/
 @import "components/icon-row.css";	/*아이콘 정렬*/
 @import "components/alt-screen-header.css";	/*설정, 채팅창 상단바*/
+@import "components/no-mobile.css";	/*화면제한*/
 
 /*screens*/
 @import "screens/login.css";	/*로그인 창*/

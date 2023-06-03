@@ -113,9 +113,24 @@
 	position:absolute;
 	bottom:10px;
 	right:10px;
-	font-size:14px;
+	font-size:12px;
 }
 
 .openchat-box__heart-count span {
 	margin-left:3px;
+}
+
+@keyframes heartBeat {
+	from {
+		color:white;		
+	}
+	
+	to{
+		color:red;
+	}
+	
+}
+
+.openchat-box__heart-count:hover i {
+	animation:heartBeat 1s linear forwards;
 }

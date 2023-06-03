@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang=:en>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../css/style.css" />
+		<!--'../' 은 해당 파일이 있는 폴더의 상위 폴더라는 의미이다. 
+			해당 파일은 html/bodyscreen 안에 있으므로, ../을 두 번 사용해 html, html의 상위 폴더까지 들어간 뒤 경로를 탐색해 css를 불러왔다.-->ㄴ
+		
+		<title>Chats -Kokoa clone</title>
+	</head>
+	<body class="chat-screen">
+		<!--기기 상단바 제작-->
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No service</span>
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+			<span>19:35</span>
+			</div>
+			<div class="status-bar__column">
+			<span>110%</span>
+			<i class="fas fa-battery-three-quarters"></i>
+			<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+		<!--<div> 칸 총 3개를 활용하여 각 칸 안에 필요구문을 넣었고, fontawesome을 활용하여 적절한 icon을 넣음 -->
+		
+		<header class="alt-header">
+			<div class="alt-header__column">
+				<a href="javascript:history.back();">
+					<i class="fas fa-angle-left fa-2x"></i>
+				</a>
+			</div>
+			
+			<div class="alt-header__column">
+				<h1 class="alt-header__title">팜하니</h1>
+			</div>
+			
+			<div class="alt-header__column">
+				<span><i class="fas fa-search fa-lg"></i></span>
+				<span><i class="fas fa-bars fa-lg"></i></span>
+			</div>
+		</header>
+		<!--아이콘을 span으로 한 번 감싼 이유는, 아이콘을 조정할 때 span을 통해 조정하기 위함이다. 
+			굳이 할 필요는 없지만, 편리하게 하기 위함.-->
+		
+		<main class="main-screen main-chat">
+			
+			<div class="chat__timestamp">
+				Monday, may 29, 2023
+			</div>
+			
+			<div class="message-row">
+				<img src="https://user-images.githubusercontent.com/95339052/241748398-feccf82d-795b-472c-a6e3-8a6a9efed308.jpg">
+				
+				<div class="message-row__box">
+					
+					<span class="message-opponent">팜하니</span>
+					<div class="message-row__content">
+						<span class="message__bubble">강해린 이상하다</span>
+						<span class="message__time">22:49</span>
+					</div>
+				</div>
+			</div>
+			<!--채팅창을 만드는 코드.
+				채팅은 두 가지 요소로 이루어져 있다. 프로필사진, 그리고 메세지 박스.
+				전체를 감싸는 div를 하나 만들고, 프사에 해당하는 이미지를 넣어 프로필사진에 해당하는 요소를 완성한다.	
+				이후 메세지를 보낼 때 사용될 박스를 하나 만들어 메세지 박스에 해당하는 요소의 형태를 잡는다.
+				메세지 박스는 채팅 상대의 이름, 채팅 내용, 보낸 시간, 총 3가지로 이루어져 있다.
+				메세지 박스에 상대 이름을 넣고, 하위 div를 하나 만들어 채팅 내용과 시간을 넣을 수 있도록 하였다.-->
+			
+			<div class="message-row message-row--own">
+				
+				<div class="message-row__box">
+
+					<div class="message-row__content">
+						<span class="message__bubble">강해린 이상하다</span>
+						<span class="message__time">22:49</span>
+					</div>
+				</div>
+			</div>
+			<!--내가 상대방에게 채팅을 보내게 하는 코드. -->
+			
+		</main>		
+		<!--main에 main-chat 클래스를 더해 fixed 된 상단바로 인해 짤리는 요소들을 보이게 한다..-->
+
+		<form class="reply">
+		
+			<div class="reply__column">
+				<i class="far fa-plus-square fa-lg"></i>
+			</div>
+			
+			<div class="reply__column">
+				<input type="text" placeholder="Write a message..."/>
+				<i class="far fa-smile fa-lg"></i>
+				<button>
+					<i class="fas fa-arrow-up"></i>
+				</button>
+			</div>
+		</form>
+		<!--대화 입력창을 만드는 코드. 
+			하나의 form을 만든 뒤 +버튼, 입력창. 총 두 개의 column으로 분리했다.
+			전송버튼은 버튼 칸을 만들어 실제로 눌리도록 만들었다.-->
+		
+		<div class="no-mobile">
+			<span>Please shorten the width</span>
+		</div>
+		
+		<!--fontawesome을 통한 아이콘을 html에 활용하기 위해서는 반드시 해당 구문을 <body> 마지막 부분에 넣어줘야 함.
+		그러지 않을 시 작동 X-->
+		<script
+				script src="https://kit.fontawesome.com/6478f529f2.js"
+crossorigin="anonymous"></script>
+	</body>
+</html>

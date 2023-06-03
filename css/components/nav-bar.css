@@ -31,10 +31,25 @@
 
 /* nav__link에 position relative를 부여하면 nav__notification는 nav가 아닌 nav__link를 기준으로 움직이게 된다.*/
 
+@keyframes notificationAnimation {
+	0% {
+		transform:none;
+	}
+	
+	50% {
+		transform:translateY(-5px) rotateY(45deg);
+	}
+	
+	100% {
+		transform:none;
+	}
+}
+
 .nav__notification {
 	position:absolute;
 	left:15px;
 	bottom:15px;
+	animation: notificationAnimation 2s ease-in-out infinite;
 }
 /*position absolute를 통해 해당 코드가 레이어에 겹치도록 설정*/
 
@@ -51,3 +66,5 @@
 	bottom: 30px;
 }
 /*설정 변경사항을 알려주기 위한 코드.*/
+
+
