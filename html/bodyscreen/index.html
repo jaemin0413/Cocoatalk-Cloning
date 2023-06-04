@@ -2,7 +2,10 @@
 <html lang=:en>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<!--'../' 은 해당 파일이 있는 폴더의 상위 폴더라는 의미이다. 
+			해당 파일은 html/bodyscreen 안에 있으므로, ../을 두 번 사용해 html, html의 상위 폴더까지 들어간 뒤 경로를 탐색해 css를 불러왔다.-->
+		
 		<title>Welcome to Kokoa clone</title>
 	</head>
 	<body>
@@ -56,6 +59,9 @@
 			password에 해당하는 값을 입력받을 때 값을 무조건 가지도록 required를 사용했다.
 			onivalid와 onchange를 활용하여 요구 값 미기입시 출력되는 메세지를 바꿨다.-->
 		
+		<div class="no-mobile">
+			<span>Please shorten the width</span>
+		</div>
 		
 		<!--fontawesome을 통한 아이콘을 html에 활용하기 위해서는 반드시 해당 구문을 <body> 마지막 부분에 넣어줘야 함.
 		그러지 않을 시 작동 X-->

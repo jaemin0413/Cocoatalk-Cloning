@@ -30,10 +30,9 @@
 }
 /*해당 코드를 통해 텍스트가 아이콘 중앙 하단에 오게 한다. */
 
-.more-suggestions__icon-image {
+.more-suggestions__icon-image img {
 	width:60px;
 	height:60px;
-	background-color: var(--yellow);
 	border-radius:10px;
 	display:flex;
 	justify-content:center;

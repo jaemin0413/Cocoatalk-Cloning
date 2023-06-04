@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../../css/style.css" />
 		<!--'../' 은 해당 파일이 있는 폴더의 상위 폴더라는 의미이다. 
-			해당 파일은 html/bodyscreen 안에 있으므로, ../을 두 번 사용해 html, html의 상위 폴더까지 들어간 뒤 경로를 탐색해 css를 불러왔다.-->ㄴ
+			해당 파일은 html/bodyscreen 안에 있으므로, ../을 두 번 사용해 html, html의 상위 폴더까지 들어간 뒤 경로를 탐색해 css를 불러왔다.-->
 		
 		<title>Chats -Kokoa clone</title>
 	</head>
@@ -51,6 +51,19 @@
 				Monday, may 29, 2023
 			</div>
 			
+			<div class="message-row message-row--own">
+				
+				<div class="message-row__box">
+
+					<div class="message-row__content">
+						<span class="message__bubble">나 오늘 좀 웃기지 않아요?</span>
+						<span class="message__time">19:56</span>
+					</div>
+				</div>
+			</div>
+			<!--내가 상대방에게 채팅을 보내는 코드. -->
+			
+			
 			<div class="message-row">
 				<img src="https://user-images.githubusercontent.com/95339052/241748777-4147c0c2-dbcb-49c8-8332-a4f02e1e3e5b.jpg">
 				
@@ -58,8 +71,8 @@
 					
 					<span class="message-opponent">김민지</span>
 					<div class="message-row__content">
-						<span class="message__bubble">강해린 이상하다</span>
-						<span class="message__time">22:49</span>
+						<span class="message__bubble">웽</span>
+						<span class="message__time">19:57</span>
 					</div>
 				</div>
 			</div>
@@ -70,17 +83,66 @@
 				메세지 박스는 채팅 상대의 이름, 채팅 내용, 보낸 시간, 총 3가지로 이루어져 있다.
 				메세지 박스에 상대 이름을 넣고, 하위 div를 하나 만들어 채팅 내용과 시간을 넣을 수 있도록 하였다.-->
 			
+			<div class="message-row">
+				<img src="https://user-images.githubusercontent.com/95339052/241748777-4147c0c2-dbcb-49c8-8332-a4f02e1e3e5b.jpg">
+				
+				<div class="message-row__box">
+					
+					<span class="message-opponent">김민지</span>
+					<div class="message-row__content">
+						<span class="message__bubble">강해린 이상하다</span>
+						<span class="message__time">19:57</span>
+					</div>
+				</div>
+			</div>
+			
 			<div class="message-row message-row--own">
 				
 				<div class="message-row__box">
 
 					<div class="message-row__content">
-						<span class="message__bubble">강해린 이상하다</span>
-						<span class="message__time">22:49</span>
+						<span class="message__bubble">안 웃겨요?</span>
+						<span class="message__time">19:57</span>
 					</div>
 				</div>
 			</div>
-			<!--내가 상대방에게 채팅을 보내게 하는 코드. -->
+			
+			<div class="message-row">
+				<img src="https://user-images.githubusercontent.com/95339052/241748777-4147c0c2-dbcb-49c8-8332-a4f02e1e3e5b.jpg">
+				
+				<div class="message-row__box">
+					
+					<span class="message-opponent">김민지</span>
+					<div class="message-row__content">
+						<span class="message__bubble">아</span>
+						<span class="message__time">19:58</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="message-row">
+				<img src="https://user-images.githubusercontent.com/95339052/241748777-4147c0c2-dbcb-49c8-8332-a4f02e1e3e5b.jpg">
+				
+				<div class="message-row__box">
+					
+					<span class="message-opponent">김민지</span>
+					<div class="message-row__content">
+						<span class="message__bubble">멤버들에게 웃기다고 듣는 게 미션이신가요?</span>
+						<span class="message__time">19:58</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="message-row message-row--own">
+				
+				<div class="message-row__box">
+
+					<div class="message-row__content">
+						<span class="message__bubble">(당황)</span>
+						<span class="message__time">20:11</span>
+					</div>
+				</div>
+			</div>
 			
 		</main>		
 		<!--main에 main-chat 클래스를 더해 fixed 된 상단바로 인해 짤리는 요소들을 보이게 한다..-->
